@@ -1,0 +1,186 @@
+@import "../../../constants/variables.scss";
+.footer-wrapper {
+  font-family: $font-mulish;
+  .footer-top {
+    height: 400px;
+    padding: 3rem 6rem;
+    background-image: url("../../../assets/images/footer-background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .title {
+      font-weight: normal;
+      font-size: $large;
+    }
+    .title-subsection {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      .contact-us {
+        width: 50%;
+        text-align: center;
+        .custom-button {
+          margin-top: 3rem;
+          padding: 1.5rem 4rem;
+          background-color: $theme-white;
+          border: 1px solid $lightblue;
+          font-size: $input;
+          outline: none;
+          text-transform: capitalize;
+          &:hover {
+            background-color: $theme-blue;
+          }
+        }
+      }
+      .heading {
+        font-family: $font-fahkwang;
+        font-size: $h1;
+        margin-bottom: 1rem;
+        font-weight: 300;
+      }
+      .description {
+        font-size: $input;
+      }
+    }
+  }
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 6rem;
+    align-items: flex-start;
+    font-family: $font-mulish;
+    background-color: $theme-blue;
+    color: $theme-white;
+    .footer-item-wrapper {
+      width: 30%;
+      &.social-links-mobile {
+        display: none;
+      }
+      &:nth-child(2) {
+        padding: 0 4rem;
+      }
+      .follow-us {
+        font-size: $regular;
+        font-weight: 600;
+      }
+      .social-links {
+        display: flex;
+        padding: 1rem 0;
+        a:not(:first-child) {
+          margin-left: 1rem;
+        }
+      }
+    }
+    .footer-item-title {
+      font-size: $regular17;
+      font-weight: 600;
+      padding-bottom: 1.5rem;
+    }
+    .logo-container {
+      width: 100%;
+      max-width: 300px;
+    }
+    .address {
+      margin-bottom: 1.5rem;
+    }
+    .address,
+    .phone {
+      font-size: $regular;
+      text-align: left;
+    }
+    .sitemap-list {
+      font-size: $regular17;
+      text-align: left;
+      margin-bottom: 2rem;
+      column-count: 2;
+      .line {
+        font-size: $regular;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  .copyright-section {
+    background-color: $theme-blue;
+    color: $theme-white;
+    display: flex;
+    padding: 0rem 6rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    font-size: $regular;
+    border-top: 1px solid $theme-white;
+    border-bottom: 1px solid $theme-white;
+  }
+}
+
+@media only screen and (max-width: $mobile-max-width) {
+  .footer-wrapper {
+    .footer-top {
+      height: auto;
+      padding: 6rem;
+      .title-subsection {
+        .contact-us {
+          width: 100%;
+          .custom-button {
+            padding: 2rem 4rem;
+            font-size: $h3;
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      flex-direction: column;
+      .footer-item-wrapper {
+        width: 100%;
+        &.logo {
+          display: flex;
+          justify-content: center;
+        }
+        &.social-links-mobile {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: 4rem;
+          text-align: center;
+          a {
+            width: 20%;
+            font-size: $h3;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+          }
+          a:not(:first-child) {
+            margin-left: 0;
+          }
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+      .footer-item-title {
+        display: none;
+      }
+      .logo-container {
+        padding: 3rem;
+      }
+      .address,
+      .phone {
+        font-size: $h4;
+        text-align: center;
+      }
+    }
+    .copyright-section {
+      padding: 0rem 6rem;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      .designed-by {
+        display: none;
+      }
+    }
+  }
+}

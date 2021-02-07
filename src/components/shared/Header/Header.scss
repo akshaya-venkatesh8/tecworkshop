@@ -1,0 +1,202 @@
+@import "../../../constants/variables.scss";
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vh;
+  padding: 0 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  .logo {
+    height: 4vh;
+    a.logo-link {
+      display: flex;
+      height: 100%;
+    }
+  }
+  .mobile-menu {
+    display: none;
+    .menu-content {
+      display: none;
+    }
+  }
+  &.light {
+    background-color: rgba($color: $theme-white, $alpha: 1);
+    .logo {
+      color: $theme-blue;
+    }
+    .nav-wrapper {
+      .nav-links {
+        span {
+          color: $theme-blue;
+        }
+        .child-page-link-wrapper {
+          background-color: $theme-white;
+          span {
+            &:hover {
+              background-color: #f1f1f1;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.dark {
+    background-color: rgba($color: $theme-blue, $alpha: 1);
+    .logo {
+      color: $theme-white;
+    }
+    .nav-wrapper {
+      .nav-links {
+        span {
+          color: $theme-white;
+        }
+        .child-page-link-wrapper {
+          background-color: $theme-blue;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $tab-max-width) {
+  .header-wrapper {
+    justify-content: center;
+    .logo {
+      height: 4vh;
+      a.logo-link {
+        align-items: center;
+      }
+    }
+    .mobile-menu {
+      display: block;
+      position: absolute;
+      right: 15px;
+      font-size: $h3;
+      color: $theme-white;
+      #close-icon {
+        width: 20px;
+        height: 15px;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        z-index: 7;
+        span {
+          display: block;
+          position: absolute;
+          height: 3px;
+          width: 100%;
+          border-radius: 9px;
+          opacity: 1;
+          left: 0;
+          -webkit-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -webkit-transition: 0.25s ease-in-out;
+          -moz-transition: 0.25s ease-in-out;
+          -o-transition: 0.25s ease-in-out;
+          transition: 0.25s ease-in-out;
+          -webkit-transform-origin: left center;
+          -moz-transform-origin: left center;
+          -o-transform-origin: left center;
+          transform-origin: left center;
+          &.light {
+            background: $theme-blue;
+          }
+          &.dark {
+            background: $theme-white;
+          }
+          &:nth-child(1) {
+            top: 0;
+          }
+          &:nth-child(2) {
+            top: 6px;
+          }
+          &:nth-child(3) {
+            top: 12px;
+          }
+        }
+      }
+      &.active {
+        #close-icon {
+          span {
+            background-color: $theme-white;
+            &:nth-child(1) {
+              -webkit-transform: rotate(45deg);
+              -moz-transform: rotate(45deg);
+              -o-transform: rotate(45deg);
+              transform: rotate(45deg);
+              top: -1px;
+            }
+            &:nth-child(2) {
+              width: 0%;
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              top: 13px;
+              -webkit-transform: rotate(-45deg);
+              -moz-transform: rotate(-45deg);
+              -o-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+            }
+          }
+        }
+        .menu-content {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          overflow: hidden;
+          background-color: $theme-blue;
+          z-index: 6;
+          .logo-wrapper {
+            width: 15vw;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+          }
+          .nav-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .nav-links {
+              height: auto;
+              padding: 3rem;
+              span {
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                color: $theme-white;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.light {
+      .nav-wrapper {
+        display: none;
+      }
+    }
+    &.dark {
+      .nav-wrapper {
+        display: none;
+      }
+    }
+  }
+}

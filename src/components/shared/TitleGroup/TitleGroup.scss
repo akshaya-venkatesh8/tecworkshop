@@ -1,0 +1,51 @@
+@import "../../../constants/variables.scss";
+
+.title-group-wrapper {
+  width: 100vw;
+  padding: 6rem;
+  .group-title {
+    font-size: $regular17;
+    font-family: $font-mulish;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+  .group-subsection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    .subtitle {
+      width: 40%;
+      margin-right: 2rem;
+      font-size: 2.3rem;
+      font-family: $font-fahkwang;
+      font-weight: 500;
+    }
+    .description {
+      width: 50%;
+      font-size: $regular17;
+      font-family: $font-mulish;
+      font-weight: 400;
+      padding-top: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: $tab-min-width) and (max-width: $tab-max-width) {
+}
+
+@media only screen and (max-width: $mobile-max-width) {
+  .title-group-wrapper {
+    padding: 4rem;
+    .group-subsection {
+      flex-direction: column;
+      .subtitle {
+        width: 100%;
+        margin-right: 0;
+      }
+      .description {
+        width: 100%;
+        padding-top: 3rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,184 @@
+@import "../../../constants/variables.scss";
+
+.about-wrapper {
+  .about.intro,
+  .our-plant-section {
+    background-color: $theme-blue;
+    color: $theme-white;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 6rem;
+    .title {
+      font-size: $large;
+      font-family: $font-mulish;
+      font-weight: 600;
+      margin-bottom: 3rem;
+    }
+    .subtitle {
+      font-size: 3rem;
+      font-family: $font-fahkwang;
+      margin-bottom: 2rem;
+    }
+    .description {
+      font-size: $large;
+      font-family: $font-mulish;
+      margin-bottom: 2rem;
+    }
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      margin-right: 2rem;
+      .image-title {
+        font-size: $h6;
+        font-family: $font-mulish;
+        margin: 1rem 0;
+      }
+    }
+    .right-section {
+      width: 40%;
+    }
+    ul {
+      padding-left: $large;
+      li {
+        font-size: $large;
+        font-family: $font-mulish;
+      }
+    }
+    .image-wrapper {
+      height: 100%;
+      .image {
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+  .about.intro {
+    padding-top: calc(6rem + 8vh);
+  }
+  .ethos-section {
+    padding: 6rem;
+    .title {
+      font-size: $large;
+      font-family: $font-mulish;
+      font-weight: 600;
+      margin-bottom: 3rem;
+    }
+    .image-text-wrapper {
+      justify-content: space-around;
+      .ethics-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        width: 20%;
+        .image-wrapper {
+          width: 90px;
+          height: 90px;
+          .image {
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+        .ethics-title {
+          margin: 1rem;
+          text-transform: uppercase;
+          font-size: $large;
+          font-weight: bold;
+          font-family: $font-mulish;
+        }
+        .description {
+          font-size: $h5;
+          font-family: $font-mulish;
+          text-align: center;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .client-logo-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 6rem 6rem;
+    .logo-wrapper {
+      width: 12%;
+      &:not(:nth-child(5n)) {
+        margin-right: 10%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max-width) {
+  .about-wrapper {
+    .about.intro,
+    .our-plant-section {
+      padding: 4rem;
+      flex-direction: column;
+      .left-section {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 3rem;
+      }
+      .right-section {
+        width: 100%;
+      }
+    }
+    .about.intro {
+      padding-top: calc(4rem + 8vh);
+    }
+    .our-plant-section {
+      flex-direction: column-reverse;
+      .right-section {
+        height: 40vh;
+        margin-bottom: 3rem;
+        .image-wrapper {
+          height: 100%;
+          .image {
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+      .left-section {
+        margin-bottom: 0;
+      }
+    }
+    .ethos-section {
+      padding: 4rem;
+      .image-text-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        .ethics-item {
+          width: 75%;
+          .image-wrapper {
+            width: 90px;
+            height: 90px;
+          }
+        }
+      }
+    }
+    .client-logo-section {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0 4rem 4rem;
+      .logo-wrapper {
+        width: 20%;
+        &:not(:nth-child(5n)) {
+          margin-right: 0%;
+        }
+        &:not(:nth-child(3n)) {
+          margin-right: 20%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+@import "../../../constants/variables.scss";
+
+.contact-us-wrapper {
+  background-image: url("../../../assets/images/pexels-aleksandra-platonova-2263510-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: $font-mulish;
+  .details-section {
+    padding: 6rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    .main-heading {
+      margin: 2rem 0;
+      font-family: $font-fahkwang;
+      font-size: $h3;
+      color: $theme-white;
+      text-transform: uppercase;
+      text-align: center;
+      span {
+        border-bottom: 1px solid $theme-white;
+      }
+    }
+    .location-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 3rem;
+      border-bottom: 0.5px solid $theme-white;
+      .contact-info-section {
+        width: 30%;
+        .location-tile {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 4rem;
+          .title {
+            margin-bottom: 1rem;
+            color: $theme-white;
+            font-size: $regular17;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+          .address {
+            color: $theme-white;
+            font-size: $h5;
+          }
+          &:nth-child(2) {
+            margin-bottom: 0.5rem;
+          }
+          &:not(:first-child) {
+            .title {
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+      .location-section {
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        .location-tile {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 4rem;
+          .title {
+            margin-bottom: 1rem;
+            color: $theme-white;
+            font-size: $regular17;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+          .address {
+            color: $theme-white;
+            font-size: $h5;
+          }
+          &:not(:nth-child(2n)) {
+            margin-right: 10%;
+          }
+        }
+      }
+    }
+    .form-section {
+      padding: 4rem 0;
+      .form-title {
+        font-size: $regular17;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $theme-white;
+      }
+      form {
+        padding: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        input.form-field {
+          width: 48%;
+          padding: 0.8rem;
+          border: 0;
+          outline: none;
+          &::placeholder {
+            font-family: $font-mulish;
+            color: $light-grey;
+          }
+        }
+        textarea {
+          margin: 2rem 0;
+          width: 100%;
+          height: 150px;
+          padding: 1rem;
+          border: 0;
+          outline: none;
+          resize: none;
+          overflow: auto;
+          &::placeholder {
+            font-family: $font-mulish;
+            color: $light-grey;
+          }
+        }
+        .button-wrapper {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          .form-button {
+            align-self: flex-end;
+            padding: 1rem 3rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 0;
+            cursor: pointer;
+            &:hover {
+              background-color: $theme-blue;
+              color: $theme-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max-width) {
+  .contact-us-wrapper {
+    .details-section {
+      padding: 4rem;
+      padding-top: calc(8vh + 4rem);
+      .location-wrapper {
+        flex-direction: column;
+        .contact-info-section {
+          width: 100%;
+          border-bottom: 1px solid $theme-white;
+          .location-tile {
+            width: 90%;
+            .title {
+              margin-bottom: 1rem;
+              color: $theme-white;
+              font-size: $regular17;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+            .address {
+              color: $theme-white;
+              font-size: $regular17;
+            }
+            &:nth-child(2) {
+              margin-bottom: 2rem;
+            }
+            &:not(:first-child) {
+              .title {
+                margin-bottom: 0.5rem;
+              }
+            }
+          }
+        }
+        .location-section {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 4rem;
+          .location-tile {
+            width: 45%;
+            .title {
+              font-size: $regular17;
+            }
+            .address {
+              font-size: $regular17;
+            }
+            &:not(:nth-child(2n)) {
+              margin-right: 10%;
+            }
+          }
+        }
+      }
+      .form-section {
+        padding: 4rem 0;
+        .form-title {
+          font-size: $regular;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $theme-white;
+        }
+        form {
+          padding: 4rem 0;
+          flex-direction: column;
+          input.form-field {
+            width: 100%;
+            padding: 1.5rem;
+            border: 0;
+            outline: none;
+            &::placeholder {
+              font-family: $font-mulish;
+              color: $light-grey;
+            }
+            &:first-child {
+              margin-bottom: 2rem;
+            }
+          }
+          textarea {
+            margin: 2rem 0;
+            width: 100%;
+            height: 150px;
+            padding: 1rem;
+            border: 0;
+            outline: none;
+            resize: none;
+            overflow: auto;
+            &::placeholder {
+              font-family: $font-mulish;
+              color: $light-grey;
+            }
+          }
+          .button-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            .custom-button {
+              align-self: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+}

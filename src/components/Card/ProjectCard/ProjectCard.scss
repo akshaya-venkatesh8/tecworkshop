@@ -1,0 +1,35 @@
+@import "../../../constants/variables.scss";
+
+.project-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  .card-details {
+    .image-wrapper {
+      height: 300px;
+      .image {
+        height: 100%;
+      }
+    }
+    .project-card-title {
+      font-family: $font-mulish;
+      font-size: $regular;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+    .project-card-description {
+      font-family: $font-mulish;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .image-text-wrapper {
+    font-size: $regular;
+    font-family: $font-fahkwang;
+    .img-wrapper {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

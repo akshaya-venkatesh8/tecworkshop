@@ -1,0 +1,40 @@
+@import "../../../constants/variables.scss";
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: $h5;
+  font-family: $font-mulish;
+  .nav-links {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    span {
+      padding: 0 15px;
+      font-size: 1.125rem;
+      cursor: pointer;
+    }
+    .child-page-link-wrapper {
+      display: none;
+      &.active {
+        position: absolute;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        background-color: $theme-blue;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        span {
+          padding: 1rem 3.5rem;
+          &:hover {
+            background-color: #243d6e;
+          }
+          &:last-child {
+            padding-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

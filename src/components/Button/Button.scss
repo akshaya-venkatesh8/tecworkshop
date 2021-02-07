@@ -1,0 +1,25 @@
+@import "../../constants/variables.scss";
+
+.custom-button {
+  padding: 1rem 3.5rem;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  &.light {
+    background-color: $theme-white;
+    color: $theme-blue;
+    &:hover {
+      background-color: $theme-blue;
+      color: $theme-white;
+    }
+  }
+  &.dark {
+    background-color: $theme-blue;
+    color: $theme-white;
+    &:hover {
+      background-color: $theme-white;
+      color: $theme-blue;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../constants/variables.scss";
+
+.errorpage-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .errorpage-contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .image-wrapper {
+      max-width: 75%;
+      height: 50%;
+    }
+    a {
+      text-decoration: none;
+      font-size: $h4;
+      font-weight: bold;
+      color: #612e93;
+      &:hover {
+        cursor: pointer;
+        color: #ef397c;
+      }
+    }
+  }
+}

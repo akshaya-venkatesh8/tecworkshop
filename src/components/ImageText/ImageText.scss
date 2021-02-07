@@ -1,0 +1,19 @@
+@import "../../constants/variables.scss";
+
+.image-text-wrapper {
+  display: flex;
+  align-items: center;
+  color: currentColor;
+  position: relative;
+  font-size: $h6;
+  font-family: $font-fahkwang;
+  .img-wrapper {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+  }
+  a {
+    z-index: 2;
+  }
+}

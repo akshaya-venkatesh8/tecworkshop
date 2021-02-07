@@ -1,0 +1,117 @@
+@import "../../../constants/variables.scss";
+
+.furniture-page-wrapper {
+  .banner-section {
+    height: 80vh;
+    .banner-wrapper {
+      .image {
+        height: 100%;
+      }
+      .banner-content {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        color: $theme-white;
+        .title {
+          font-size: $huge;
+          padding: 1rem 0;
+          font-family: $font-fahkwang;
+        }
+        .description {
+          font-size: $h5;
+          font-family: $font-mulish;
+        }
+      }
+    }
+  }
+  .offer-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem;
+    .title {
+      flex: 1;
+      font-size: 1.125rem;
+      font-weight: bold;
+      font-family: $font-mulish;
+      text-transform: uppercase;
+    }
+    .description {
+      flex: 1.5;
+      font-size: 1.125rem;
+      font-family: $font-mulish;
+      div {
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+  .items-wrapper {
+    padding: 0 6rem 6rem;
+    .product-wrapper {
+      .slider-wrapper {
+        .swiper-container {
+          .swiper-scrollbar {
+            visibility: hidden;
+          }
+        }
+      }
+      &:first-child {
+        .product-title {
+          margin-top: 0;
+        }
+      }
+      .product-title {
+        font-size: $regular17;
+        font-weight: bold;
+        font-family: $font-mulish;
+        margin: 3rem 0;
+      }
+      .slider-wrapper {
+        .react-multi-carousel-list {
+          .react-multi-carousel-item {
+            .slider-content {
+              padding: 0 2.5rem;
+              .slider-image-wrapper {
+                height: 250px;
+                max-height: 250px;
+              }
+            }
+            &.react-multi-carousel-item--active {
+              .slider-content {
+                .slider-image-wrapper {
+                  height: 250px;
+                  max-height: 250px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max-width) {
+  .furniture-page-wrapper {
+    .banner-section {
+      height: 45vh;
+    }
+    .offer-section {
+      flex-direction: column;
+      padding: 4rem;
+      .title {
+        margin-bottom: 1rem;
+      }
+    }
+    .items-wrapper {
+      padding: 0 4rem 4rem;
+    }
+  }
+}

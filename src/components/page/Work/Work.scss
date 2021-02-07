@@ -1,0 +1,236 @@
+@import "../../../constants/variables.scss";
+
+.work-page-wrapper {
+  .banner-section {
+    height: 100vh;
+    .banner-wrapper {
+      .image {
+        height: 100%;
+      }
+      .banner-content {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        color: $theme-white;
+        .title {
+          font-size: $huge;
+          padding: 1rem 0;
+          font-family: $font-fahkwang;
+        }
+        .description {
+          font-size: $h5;
+          font-family: $font-mulish;
+        }
+      }
+    }
+  }
+  .offer-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem;
+    .title {
+      flex: 1;
+      font-size: 1.125rem;
+      font-weight: bold;
+      font-family: $font-mulish;
+      text-transform: uppercase;
+    }
+    .description {
+      flex: 1.5;
+      font-size: 1.125rem;
+      font-family: $font-mulish;
+      div {
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+  .ethics-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 6rem 6rem;
+    .ethics-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      width: 20%;
+      .image-wrapper {
+        width: 90px;
+        height: 90px;
+      }
+      .ethics-title {
+        margin: 1rem;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        font-family: $font-mulish;
+      }
+      .description {
+        font-size: 1.125rem;
+        font-family: $font-mulish;
+        text-align: center;
+      }
+    }
+  }
+  .featured-projects-section {
+    background-color: $theme-blue;
+    color: $theme-white;
+    padding: 6rem;
+    .title {
+      font-size: $large;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: $font-mulish;
+    }
+    .featured-projects-wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      .image-wrapper {
+        width: 49%;
+        margin-left: 9%;
+        margin-right: 0;
+        height: 500px;
+        .image {
+          height: 100%;
+        }
+      }
+      .details {
+        width: 42%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: $font-mulish;
+        font-size: 1.125rem;
+        .title {
+          margin-bottom: 2rem;
+        }
+        .description {
+          margin-bottom: 4rem;
+        }
+        .image-text-wrapper {
+          a {
+            font-size: 1.125rem;
+          }
+        }
+      }
+      &:not(:last-child) {
+        margin: 4rem 0;
+      }
+      &:nth-child(2n) {
+        flex-direction: row;
+        .image-wrapper {
+          margin-right: 9%;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .other-projects-section {
+    padding: 6rem;
+    .title {
+      font-size: $large;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: $font-mulish;
+    }
+    .project-list-wrapper {
+      margin: 3rem 0 0;
+    }
+    .load-more-projects {
+      font-size: $h6;
+      font-family: $font-fahkwang;
+      text-align: center;
+      text-decoration: underline;
+      color: $lightblue;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max-width) {
+  .work-page-wrapper {
+    .offer-section {
+      flex-direction: column;
+      padding: 4rem;
+      .title {
+        margin-bottom: 1rem;
+      }
+    }
+    .ethics-section {
+      padding: 0 4rem 4rem;
+      .ethics-item {
+        padding: 0;
+        width: 20%;
+        .image-wrapper {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .featured-projects-section {
+      padding: 4rem;
+      .title {
+        font-size: $large;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: $font-mulish;
+      }
+      .featured-projects-wrapper {
+        flex-direction: column;
+        .image-wrapper {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+          height: 40vh;
+        }
+        .details {
+          width: 100%;
+          display: flex;
+          margin-bottom: 1rem;
+          .title {
+            margin: 2rem 0;
+          }
+          .image-text-wrapper {
+            .img-wrapper {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+        &:nth-child(2n) {
+          flex-direction: column;
+          .image-wrapper {
+            margin-right: 0;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    .other-projects-section {
+      padding: 4rem;
+      .project-list-wrapper {
+        margin: 3rem 0 0;
+        .cards {
+          margin-bottom: 4rem;
+          .project-card-wrapper {
+            .image-text-wrapper {
+              .img-wrapper {
+                width: 25px;
+                height: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

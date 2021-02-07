@@ -1,0 +1,180 @@
+@import "../../../constants/variables.scss";
+
+.project-wrapper {
+  position: relative;
+  .title-section {
+    margin-top: 8vh;
+    height: 17vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    .project-title {
+      font-size: $h3;
+      font-family: $font-fahkwang;
+    }
+    .project-location {
+      font-size: $smallMedium;
+      font-family: $font-mulish;
+    }
+  }
+  .banner-section {
+    height: 100vh;
+    .image {
+      height: 100%;
+    }
+  }
+  .project-scroll-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 0;
+    .project-description {
+      width: 30%;
+      padding: 0 6rem;
+      font-size: $large;
+      font-family: $font-mulish;
+    }
+    .scroll-wrapper {
+      width: 70%;
+      height: 350px;
+      .slider-wrapper {
+        height: 100%;
+        .swiper-container {
+          height: 100%;
+          .swiper-scrollbar {
+            visibility: visible;
+            bottom: 0;
+            height: 3px;
+          }
+          .swiper-wrapper {
+            max-height: 320px;
+            .swiper-slide {
+              margin: 0;
+              max-height: 320px;
+              border: 1px solid $orange;
+              border-top-width: 2px;
+              border-bottom-width: 2px;
+              background-color: rgba(0, 0, 0, 0.5);
+              z-index: 5;
+              overflow: hidden;
+              cursor: pointer;
+              &:hover {
+                img {
+                  transition: transform 3s;
+                  -webkit-transition: transform 3s;
+                  transform: translate3d(0px, 0px, 0px) scale(1.15);
+                }
+              }
+              img {
+                transition: transform 3s;
+                -webkit-transition: transform 3s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .project-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 25;
+    overflow: hidden;
+    .slider-wrapper {
+      height: 100%;
+      .swiper-container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .swiper-scrollbar {
+          visibility: hidden;
+          bottom: 0;
+          height: 0;
+        }
+        .swiper-wrapper {
+          height: auto;
+          .swiper-slide {
+            height: 80vh;
+            margin: 0;
+            z-index: 5;
+            padding: 0 4rem;
+            .slider-image-wrapper {
+              display: flex;
+              justify-content: center;
+              height: 100%;
+              max-height: initial;
+              img {
+                width: auto;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .close-overlay {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 5%;
+      left: 95%;
+      cursor: pointer;
+      z-index: 30;
+      .left-slash,
+      .right-slash {
+        position: absolute;
+        background: white;
+        height: 100%;
+        width: 5%;
+      }
+      .left-slash {
+        transform: rotate(45deg);
+      }
+      .right-slash {
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile-max-width) {
+  .project-wrapper {
+    .banner-section {
+      height: 75vh;
+    }
+    .project-scroll-section {
+      flex-direction: column;
+      padding: 4rem 0;
+      .project-description {
+        width: 100%;
+        padding: 0 4rem;
+        font-size: $large;
+        font-family: $font-mulish;
+      }
+      .scroll-wrapper {
+        width: 100%;
+        padding: 4rem;
+      }
+    }
+    .project-overlay {
+      .slider-wrapper {
+        .swiper-container {
+          .swiper-wrapper {
+            .swiper-slide {
+              height: 50vh;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
